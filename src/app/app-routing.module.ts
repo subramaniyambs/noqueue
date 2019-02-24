@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { HomeComponent } from './home/home.component';
-
+import { RestuarantListComponent } from './restuarant-list/restuarant-list.component';
+import { CreateRestuarantComponent } from './create-restuarant/create-restuarant.component';
 const routes: Routes = [
   {
   path: '',
@@ -13,7 +14,22 @@ const routes: Routes = [
     {
       path: '',
       component: HomeComponent
-    }, {
+    }
+    ,{
+      path: 'create',
+      component: CreateRestuarantComponent,
+      data: {
+        title: 'Create Restuarant'
+      }
+    }
+    ,{
+      path: 'restuarantList',
+      component: RestuarantListComponent,
+      data: {
+        title: 'Restuarant List'
+      }
+    }
+    ,{
       path: 'accordion',
       loadChildren: './+accordion/accordion.module#AccordionModule',
       data: {
@@ -143,3 +159,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const routingComponents = [RestuarantListComponent]

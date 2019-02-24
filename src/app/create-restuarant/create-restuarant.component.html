@@ -1,0 +1,29 @@
+<div class="example-container">
+    <!-- <form [formGroup]="resturantForm" (ngSubmit)="onFormSubmit(resturantForm.value)">
+  <mat-form-field>
+    <input matInput placeholder="Input" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field>
+    <textarea matInput placeholder="Textarea" formControlName="area"></textarea>
+  </mat-form-field>
+
+  <div class="example-button-row">
+    <button mat-stroked-button color="primary">Submit</button>
+  </div>
+  </form> -->
+  <form [formGroup]="resturantForm" (ngSubmit)="onFormSubmit(resturantForm.value)">
+  
+    <label>
+      Name:
+      <input type="text" formControlName="name">
+    </label>
+  
+    <label>
+      Area:
+      <input type="text" formControlName="area">
+    </label>
+    <button type="submit" [disabled]="!resturantForm.valid">Submit</button>
+  </form>
+
+</div>

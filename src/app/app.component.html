@@ -1,5 +1,6 @@
-<ng-container *ngIf="customLayout; else noCustomLayout">
-  <router-outlet></router-outlet>
+
+<ng-container  class="routlet-container" *ngIf="customLayout; else noCustomLayout">
+    <router-outlet></router-outlet>
 </ng-container>
 <ng-template #noCustomLayout>
   <mk-layout-wrapper>
